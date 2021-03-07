@@ -1,0 +1,125 @@
+1.  What is the correct way to create a variable with a value of 5?
+
+    a.  num = 5
+    b.  var num = 5         THIS ONE
+    c.  var num == 5
+    d.  variable num = 5
+
+2.  How does one log Hello World! to the console?
+
+    a.  document.write("Hello World!")
+    b.  console.log('Hello World!')          THIS ONE
+    c.  console.log(Hello World!)
+    d.  print("Hello World!")
+
+3.  Given the following line of code:
+    var ciso = ["Narciso", "Lobo", "nlobo@codingdojo.com"]
+    what is the correct way to log Narciso to the console?
+
+    a.  console.log(ciso[0])          THIS ONE
+    b.  console.log(array[1])
+    c.  document.write("Narciso")
+    d.  console.log(ciso[1])
+
+4.  Using the same array, what is the correct way to change
+    nlobo@codingdojo.com to narcisolobo@gmail.com?
+
+    a.  "nlobo@codingdojo.com" = "narcisolobo@gmail.com"
+    b.  ciso[2] = false
+    c.  "narcisolobo@gmail.com" = ciso[2]
+    d.  ciso[2] = "narcisolobo@gmail.com"    THIS ONE
+
+5.  Which of the following code blocks will log the numbers 1 - 10 to
+    the console? (Hint - use a T-Diagram!)
+
+    a.  for(var i = 0; i <= 10; i++){
+            console.log(i)
+        }
+    b.  for(var i = 1; i <= 10; i++){     THIS ONE
+            console.log(i)
+        }
+    c.  for(var i = 1; i < 10; i++){
+            console.log(i)
+        }
+    d.  for(var i = 1; i >= 10; i++){
+            console.log(i)
+        }
+6.  Which is the correct expression to check if a variable called num is
+    negative?
+
+    a.  if(num > 0)
+    b.  if(num >= 0)
+    c.  if(num < 1)
+    d.  if(num < 0)     THIS ONE
+
+7.  What is the data type of the variable declared in the following line
+    of JavaScript code?
+
+    var pi = "3.14159"
+
+    a.  Number
+    b.  String    THIS ONE
+    c.  Float
+    d.  Double
+
+8.  Which of the following code blocks defines a function that takes in
+    a name and logs it to the console?
+
+    a.  function hello(name){       
+            console.log("name")       //this contains a string in it. 
+        }
+    b.  function hello(){
+            console.log(hello)
+        }
+    c.  function hello(){
+            console.log(name)
+        }
+    d.  function hello(name){         THIS ONE
+            console.log(name)
+        }
+
+9.  Which of the following loops prints the numbers from 1 to 100, but for multiples of
+    three prints “Fizz” instead of the number?
+
+    a.  var num = 1              THIS ONE
+        while (num <= 100){
+            if (num % 3 == 0){             //The Modulo or modulus operator (%) divides the first number by the second number over and over and over until it can't anymore, then returns the remainder.
+
+
+                console.log("Fizz")
+            }
+            else {
+                console.log(num)
+            }
+            num++
+        }
+
+    b.  var num = 1
+        while (num <= 100){
+            if (num / 3 == 0){
+                console.log("Fizz")
+            }
+            else {
+                console.log(num)
+            }
+            num++
+        }
+
+    c.  var num = 1
+        while (num > 100){
+            if (num % 3 == 0){
+                console.log("Fizz")
+            }
+            else {
+                console.log(num)
+            }
+            num++
+        }
+
+10. Two trains are leaving Chattanooga at 10:00 am. If train a is traveling at 80 mph, and
+    train b is traveling at 50 mph, what is Ciso's favorite movie?
+
+    a.  Lock, Stock, and Two Smoking Barrels    
+    b.  The Princess Bride            THIS ONE
+    c.  A Fish Called Wanda
+    d.  Brian's Song

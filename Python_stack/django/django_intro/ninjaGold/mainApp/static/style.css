@@ -1,0 +1,21 @@
+* {
+    background-color: aqua;
+}
+
+body ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+body li {
+    outline: solid;
+    width: 100px;
+    height: 100px;
+}
+textarea {
+    display: flex;
+    margin: 0px -4px 0px 0px;
+    width: 546px;
+    height: 164px;
+} 

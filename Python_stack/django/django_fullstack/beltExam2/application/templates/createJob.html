@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Job</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Welcome, {{thisUser.first_name}}! Let's create a job!</h3>
+        <a href="/logout">Log Out!</a>
+    </div>
+    <div class="container">
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/create" method="POST">
+            {% csrf_token %}
+            <p>Title: <input type="text" name="title" placeholder="Job that needs doing?"><br></p>
+            <p>Description: <input type="text" name="description" placeholder="What needs to be done?"><br></p>
+            <p>Location: <input type="text" name="location" placeholder="Where at?"></p>
+            <p><input type="hidden" value="{{thisUser.id}}"></p>
+            <p><input type="submit" value="Create"></p>
+        </form>
+        <button><a href="/dashboard">Cancel Plan</a></button>
+    </div>
+</body>
+
+</html>

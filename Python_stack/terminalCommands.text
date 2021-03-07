@@ -1,0 +1,81 @@
+Present working directory
+
+pwd
+
+List files
+
+ls
+
+List files (long form)
+
+ls -l
+
+List all files (long form)
+
+ls -a
+
+Changing to the current directory
+
+cd .
+
+Changing to the parent directory
+
+cd ..
+
+Changing to the root directory
+
+cd /
+
+Changing to any folder
+
+cd folder_name
+
+Making a new folder
+
+mkdir new_directory_name
+
+Delete an empty directory(folder)
+
+rm directory_name
+//or
+rmdir directory_name
+
+Delete a non-empty directory(folder)
+
+rm -rf directory_name
+
+Creating a new file
+
+touch index.html
+touch style.css
+
+Removing a file
+
+rm index.html
+
+Renaming/Moving a file
+
+mv index.html new_name_index.html
+mv new_name_index.html ../new_name_index.html
+
+Copying a file
+
+cp index.html copy.html
+
+Copying a directory
+
+cp -rf directory_name copy_directory_name
+
+Opening current directory in your GUI
+
+open .
+
+
+Last note
+
+When you are navigating the terminal on your virtual machine in the Cloud, you may encounter these commands throwing back an error. When that happens, prefix your command with 'sudo' which tells the computer that you are the Super User. 'sudo' stands for 'Super User do'. This will become more relevant when we start deploying applications in the cloud, but just know that something like 'sudo' exists.
+
+//for example, you can run all the same commands but prefix them with sudo
+sudo mkdir test
+sudo touch index.html
+sudo rm -rf test

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Welcome, {{thisUser.first_name}}!</h3>
+        <a href="/books/add">Add Book and Review</a><br>
+        <a href="/logout">Logout</a>
+        <br>
+        <a href="/destroy">Clear ALL books!</a>
+    </div>
+    <div class="container">
+        <h3>Recent Book Reviews:</h3>
+        {% for book in firstThree %}
+        <ul>
+            <a href="/books/{{book.id}}">
+                <li>{{book.title}}</li>
+            </a>
+            <li>Book Rating: {{book.rating}}</li>
+            <li>{{book.user.first_name}} says: {{book.review}}</li>
+            <li>{{book.created_at}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="list">
+        <h3>Other Books with Reviews:</h3>
+        <div>
+            <ul>
+                {% for book in allBooks%}
+                <li><a href="/books/{{book.id}}">{{book.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

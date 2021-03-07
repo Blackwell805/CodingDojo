@@ -1,0 +1,16 @@
+h3 {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    outline: 1px double black;
+    outline-width: thick;
+    margin: auto;
+}
+p {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    outline: 1px double black;
+    outline-width: thick;
+    margin-inline: auto;
+}

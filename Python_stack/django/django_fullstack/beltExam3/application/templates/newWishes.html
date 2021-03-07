@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Wish</title>
+</head>
+
+<body>
+    <h3>Hello {{thisUser.first_name}}! Make a Wish!</h3>
+    <a href="/logout">Log Out!</a>
+    <div class="container">
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/createWish" method="post">
+            {% csrf_token %}
+            <p>I wish for :<input type="text" name="iWishFor" placeholder="type wish here"></p>
+            <p>Description:<input type="text" name="description" placeholder="Describe it"></p>
+            <input type="submit" value="Submit">
+            <input type="hidden" value="{{thisUser.id}}">
+        </form>
+        <button><a href="/wishes">Cancel</a></button>
+    </div>
+</body>
+
+</html>

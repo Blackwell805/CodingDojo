@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <p>Your Gold:{{request.session.gold}}</p>
+    <div class="boxes">
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+            <ul>
+                <li>
+                    <h4>Farm</h4>
+                    <p>(earn 10-20 gold)</p>
+                    <button type="submit" value="farm" name="location">find gold </button>
+                </li>
+                <li>
+                    <h4>Cave</h4>
+                    <p>(earn 5-10 gold)</p>
+                    <button type="submit" value="cave" name="location">find gold </button>
+                </li>
+                <li>
+                    <h4>House</h4>
+                    <p>(earn 2-5 gold)</p>
+                    <button type="submit" value="house" name="location">find gold </button>
+                </li>
+                <li>
+                    <h4>Casino</h4>
+                    <p>(earn/lose 0-50 gold)</p>
+                    <button type="submit" value="casino" name="location">find gold </button>
+                </li>
+            </ul>
+        </form>
+        <br>
+        <p>Activities<textarea name="activities" id="data" cols="50" rows="10">
+            {% for each in request.session.activities %}
+            {{each}}
+            {% endfor%}
+        </textarea></p>
+
+        <button onclick="location.href='/destroy'">Reset</button>
+
+    </div>
+</body>
+
+</html>

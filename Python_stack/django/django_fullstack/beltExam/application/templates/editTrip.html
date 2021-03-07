@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Trip</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Ok, {{editThisUser.first_name}}! Let's edit our trip!</h3>
+        <a href="/logout">Log Out!</a>
+    </div>
+    <div class="container">
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/edit/{{editFun.id}}" method="POST">
+            {% csrf_token %}
+            <p>Destination: <input type="text" value="{{editFun.destination}}" name="destination"
+                    placeholder="Where we going?"><br></p>
+            <p>Start Date: <input type="date" value="{{editFun.start_date|date:'Y-m-d'}}" name="start_date"><br></p>
+            <p>End Date: <input type="date" value="{{editFun.end_date|date:'Y-m-d'}}" name="end_date"></p>
+            <p>Plan: <textarea name="plan" cols="30" rows="10"
+                    placeholder="What are we going to do?">{{editFun.plan}}</textarea></p>
+            <p><input type="submit" value="Update"></p>
+        </form>
+        <p><a href="/dashboard">Cancel</a></p>
+    </div>
+</body>
+
+</html>

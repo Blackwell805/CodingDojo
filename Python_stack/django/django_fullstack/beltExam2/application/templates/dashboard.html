@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome, {{thisUser.first_name}}</h1>
+        <a href="/logout">Log Out!</a>
+        <form action="/jobs/new" method='POST'>
+            {% csrf_token %}
+            <button type="submit">Create a new job</button>
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <h5>Everyone's jobs:</h5>
+            <tr>
+                <th>Job</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+            {% for work in thisJob %}
+            <tr>
+                {% for work in thisJob reversed %}
+                <td>{{work.title}}</td>
+                <td>{{work.description}}</td>
+                <td>{{work.location}}</td>
+                <td>
+                    {% endfor %}
+                    <p>
+                        <a href="/jobs/{{work.id}}">View</a>|
+                        {% if work.user.id == request.session.userID %}
+                        <a href="/destroy/{{work.id}}">Remove</a> |
+                        <a href="/jobs/edit/{{work.id}}">Edit</a>
+                        {% endif %}
+                    </p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

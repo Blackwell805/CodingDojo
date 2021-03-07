@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+
+<body>
+    <h1>Welcome, {{thisUser.first_name}}!</h1>
+    <a href="/logout">Log Out!</a>
+    <a href="/wishes/new">Make a New Wish!</a>
+
+    <div class="containter">
+        <table>
+            <h3>Your Wish List:</h3>
+            <tr>
+                <th>Item |</th>
+                <th>Date Added |</th>
+                <th>Actions |</th>
+            </tr>
+            {% for wish in allWishes%}
+            {% if wish.user.id == request.session.userID %}
+            {% if not wish.granted %}
+            <tr>
+                <td>{{wish.iWishFor}}</td>
+                <td>{{wish.created_at}}</td>
+                <td>
+                    <p>
+                        <a href="/destroy/{{wish.id}}">Remove</a> |
+                        <a href="/wishes/edit/{{wish.id}}">Edit</a> |
+
+                        <a href="wishes/{{wish.id}}/granted">Granted</a>|
+                        {% endif %}
+                        {% endif %}
+                    </p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <table>
+            <h3>Granted Wishes:</h3>
+            <tr>
+                <th>Items |</th>
+                <th>Wisher |</th>
+                <th>Date Added |</th>
+                <th>Date Granted |</th>
+            </tr>
+            {% for wish in allWishes %}
+            {% if wish.granted %}
+            <tr>
+                <td>{{wish.iWishFor}}</td>
+                <td>{{wish.user.first_name}}</td>
+                <td>{{wish.created_at}}</td>
+                <td>{{wish.granted_at}}{{wish.granted}}</td>
+            </tr>
+            {% endif %}
+            {% endfor%}
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+#header{
+    background-color: crimson;
+    color:  white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+body{
+    background-color: navy;
+}
+#navigation{
+    background-color: cadetblue;
+    width: 215px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: medium;
+    text-decoration: underline;
+}
+#content{
+    background-color: black;
+    color: white;
+    width: 1115px;
+    min-height: 500px;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    padding: 15px;
+    line-height: 1.4;
+    border-radius: 20px;
+}
+#footer{
+    background-color: gray;
+    color: white;
+    min-height: 65px;
+    border-radius: 10px;
+    text-align: left;
+}
+span{
+    color: aqua;
+    text-decoration: underline;
+}

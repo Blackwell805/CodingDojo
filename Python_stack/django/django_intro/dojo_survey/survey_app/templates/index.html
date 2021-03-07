@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="/Python_stack/django/django_intro/dojo_survey/survey_app/static/css/style.css">
+</head>
+
+<body>
+    <form action='result' method='POST'>
+            {% csrf_token %}
+        Name: <input type='text' name='name'>
+        <select name="cities" id="cities">
+            <option value="San Jose">San Jose</option>
+            <option value="Seattle">Seattle</option>
+        </select>
+        <select name="favorite" id="favorite">
+            <option value='python'>Python</option>
+            <option value='javascript'>JavaScript</option>
+        </select>
+        <label for="comment area">Comment(optional):</label>
+        <textarea id="comment" name="comment" rows="4" cols="50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique ratione natus dicta, hic exercitationem aut sequi soluta odit? Corporis, obcaecati. Ab incidunt quibusdam facere deserunt unde perferendis consequuntur obcaecati!
+        </textarea>
+        <button type='submit'>Submit</button>
+
+</body>
+
+</html>

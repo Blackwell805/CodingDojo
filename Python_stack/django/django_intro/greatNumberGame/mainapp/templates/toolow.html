@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>too low</title>
+</head>
+
+<body>
+    <h1>TOO LOW!</h1>
+    <p>Try Again!</p>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="again">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall of Success</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>CodingDojo Wall</h1>
+        <h1>Welcome, {{thisUser.first_name}} </h1>
+        <a href="/logout">Log Off</a>
+    </div>
+    <div class="container">
+        <h2>Post a message</h2>
+        <form action="/message" method="POST">
+            {% csrf_token %}
+            <textarea name="post" cols="30" rows="10" placeholder="Post something here..."></textarea>
+            <input hidden type="text" name='userID' value='{{user.id}}'>
+            <button><input type="button" value="Post a message"></button>
+        </form>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    {% for cool in messages %}
+                    <li>
+                        <h4>{{cool.thisUser.first_name}} {{cool.thisUser.last_name}} -
+                            {{cool.created_at}}</h4>
+                        <p>{{cool.message}}</p>
+                    </li>
+                    <ul>
+                        {% for sweet in messages.comment %}
+                        <li>
+                            <h4>{{sweet.thisUser.first_name}} {{sweet.thisUser.last_name}} -
+                                {{sweet.created_at}}</h4>
+                            <p>{{sweet.comment}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <form action="/comment" method="POST">
+                        {% csrf_token %}
+                        <textarea name="comment" cols="30" rows="10" placeholder="Comment here..."></textarea>
+                        <input hidden type="text" name='userID' value='{{user.id}}'>
+                        <input hidden type="text" name='messageID' value='{{message.id}}'>
+                        <button><input type="button" value="Comment!"></button>
+                    </form>
+                    </form>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

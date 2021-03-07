@@ -1,0 +1,104 @@
+Created models. 
+makemigrations
+migrate
+from your_app_name.models import*
+
+create 5 books
+>>> book1=Books.objects.create(title='CSharp',desc='cool')
+>>> book1.save()
+>>> book2=Books.objects.create(title='Java',desc='really cool')
+>>> book2.save()
+>>> book3=Books.objects.create(title='Python', desc='super cool')
+>>> book3.save()
+>>> book4=Books.objects.create(title='PHP', desc='ridiculous')
+>>> book4.save()
+>>> book5=Books.objects.create(title='Ruby', desc='best')
+>>> book5.save()
+
+create 5 authors
+>>> author1=Authors.objects.create(first_name='Jane', last_name='Austen')
+>>> author1.save()
+>>> author2=Authors.objects.create(first_name='Emily', last_name='Dickinson')
+>>> author2.save()
+>>> author3=Authors.objects.create(first_name='Fyodor', last_name='Dostoevsky')
+>>> author3.save()
+>>> author4=Authors.objects.create(first_name='William', last_name='Shakespeare')
+>>> author4.save()
+>>> author5=Authors.objects.create(first_name='Lau', last_name='Tzu')
+>>> author5.save()
+
+change name of C-Sharp book to C#
+>>> newTitle = Books.objects.get(id=1)
+>>> newTitle.title = 'C#'
+>>> newTitle.save()
+
+Change the first name of the 4th author to Bill
+>>> newTitle = Books.objects.get(id=1)
+>>> newTitle.title = 'C#'
+>>> newName = Authors.objects.get(id=4)
+>>> newName.first_name = 'Bill'
+>>> newName.save()
+
+Assign the first author to the first 2 books
+>>>this_book1=Books.objects.get(id=1)
+>>> this_book1.save()
+>>> this_book2=Books.objects.get(id=2)
+>>> this_book2.save()
+>>> this_author1=Authors.objects.get(id=1)
+>>> this_author1.save()
+>>> this_author1.book.add(this_book1)
+>>> this_author1.book.add(this_book2)
+
+Assign the second author to the first 3 books
+>>> this_author2.book.add(this_book1)
+>>> this_author2.save()
+>>> this_author2.book.add(this_book2)
+>>> this_author2.book.add(this_book3)
+>>> this_author2.save()
+
+Assign the third author to the first 4 books
+>>> this_author3.book.add(this_book1)
+>>> this_author3.book.add(this_book2)
+>>> this_author3.book.add(this_book3)
+>>> this_author3.book.add(this_book4)
+
+Assign the fourth author to the first 5 books (or in other words, all the books)
+>>> this_author4.book.add(this_book1)
+>>> this_author2.save()
+>>> this_author3.save()
+>>> this_author4.save()
+>>> this_author4.book.add(this_book2)
+>>> this_author4.book.add(this_book3)
+>>> this_author4.book.add(this_book4)
+>>> this_author4.book.add(this_book5)
+>>> this_author4.save()
+
+Retrieve all the authors for the 3rd book
+>>> retrieve1=Books.objects.get(id=3)
+>>> retrieve1.author.all()
+<QuerySet [<Authors: Authors object (2)>, <Authors: Authors object (3)>, <Authors: Authors object (4)>]>
+
+Remove the first author of the 3rd book
+this_book3.author.all()
+<QuerySet [<Authors: Authors object (2)>, <Authors: Authors object (3)>, <Authors: Authors object (4)>]>
+>>> this_author2.book.remove(this_book3)
+>>> save()
+>>> this_author2.save()
+>>> this_book3.save()
+
+Add the 5th author as one of the authors of the 2nd book
+>>> this_author5.book.add(this_book2)
+>>> this_author5.save()
+
+Find all the books that the 3rd author is part of
+>>> this_author3.book.all()
+<QuerySet [<Books: Books object (1)>, <Books: Books object (2)>, <Books: Books object (3)>, <Books: Books object (4)>]>
+
+Find all the authors that contributed to the 5th book
+>>> this_book5.author.all()
+<QuerySet [<Authors: Authors object (4)>]>
+
+
+
+
+

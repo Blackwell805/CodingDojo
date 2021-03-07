@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome, {{thisUser.first_name}}</h1>
+        <a href="/logout">Log Out!</a>
+        <form action="/trips/new" method='POST'>
+            {% csrf_token %}
+            <button type="submit">Create a new trip</button>
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <h5>Your trips:</h5>
+            <tr>
+                <th>Destination</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Plan</th>
+                <th>Actions</th>
+            </tr>
+            {% for good in fun %}
+            <tr>
+                <td><a href="/trips/{{good.id}}">{{good.destination}}</a></td>
+                <td>{{good.start_date}}</td>
+                <td>{{good.end_date}}</td>
+                <td>{{good.plan}}</td>
+                <td>
+                    <p><a href="/destroy/{{good.id}}">Remove</a> |
+                        <a href="/trips/edit/{{good.id}}">Edit</a>
+                    </p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

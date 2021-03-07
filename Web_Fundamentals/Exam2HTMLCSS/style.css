@@ -1,0 +1,71 @@
+* {
+    /* outline: dashed red 1px; */
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    background-color: #1a1a1a;
+    width: 970px;
+    height: 970px;
+    color: white;
+}
+.header {
+    color: #cecfc9;
+    display: flex;
+    justify-content: space-between;
+}
+.nav {
+    background-color: #3f3f3f;
+}
+.nav ul {
+    display: inline-flex;
+    padding: 10px;
+    list-style-type: none;
+}
+.pros {
+    display: inline-flex;
+}
+.iconbox {
+    width: 240px;
+}
+.iconbox img {
+    vertical-align: top;
+}
+.text {
+    width: 188px;
+    display: inline-block;
+}
+.pros h4 {
+    color: #e37a2b;
+}
+.buy {
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.buy button {
+    background-color: #ef8638;
+    color: white;
+    width: 60px;
+    height: 30px;
+    
+}
+.content {
+    display: inline-flex;
+}
+.content p {
+    font-size: smaller;
+}
+.content h3 {
+    color: #e37a2b;
+}
+.content img {
+    border: #363636 solid;
+    margin: 8px;
+    padding: 4px;
+}
+.header2 {
+    display: flex;
+    justify-content: space-between;
+}

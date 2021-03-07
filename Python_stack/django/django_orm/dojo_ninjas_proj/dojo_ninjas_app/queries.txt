@@ -1,0 +1,87 @@
+from dojo_ninjas_app import * (we do this every time we open up shell)
+makemigrations
+migrate
+
+created 3 new dojos
+>>> d1 = Dojo.objects.create(name='killer', city='Stanwood', state='wa')
+>>> d2 = Dojo.objects.create(name='strong', city='Seattle', state='wa')
+>>> d3 = Dojo.objects.create(name='destroyer', city='Marysville', state='wa')
+>>> d1.save()
+>>> d2.save()
+>>> d3.save()
+
+deleted the 3 dojos
+>>> Dojo.objects.get(id=1).delete()
+(1, {'dojo_ninjas_app.Ninjas': 0, 'dojo_ninjas_app.Dojo': 1})
+>>> Dojo.objects.get(id=2).delete()
+(1, {'dojo_ninjas_app.Ninjas': 0, 'dojo_ninjas_app.Dojo': 1})
+>>> Dojo.objects.get(id=3).delete()
+(1, {'dojo_ninjas_app.Ninjas': 0, 'dojo_ninjas_app.Dojo': 1})
+>>> Dojo.objects.all().values()
+<QuerySet []>
+
+create 3 more dojos
+>>> d4 = Dojo.objects.create(name='abigail', city='rexburg', state='id')
+>>> d5 = Dojo.objects.create(name='randy', city='rexburg', state='id')
+>>> d6 = Dojo.objects.create(name='jack', city='rexburg', state='id')
+
+create 3 ninjas that belong to the first dojo 
+
+> n1 = Ninjas.objects.create(first_name='Austin', last_name='Blackwell', dojo=d1) it could also be dojo_id=1.  (I deleted this one. I have to use d4 since that is the next dojo I created after deleting the first 3.
+>>> n1 = Ninjas.objects.create(first_name='Austin', last_name='Blackwell', dojo=d4)
+>>> n1.save()
+>>> n2 = Ninjas.objects.create(first_name='Alayne', last_name='Blackwell', dojo=d4)
+>>> n2.save()
+>>> n3 = Ninjas.objects.create(first_name='Abbie', last_name='Blackwell', dojo=d4)
+>>> n3.save()
+
+create 3 ninjas that belong to the second dojo 
+
+>>> nn1 = Ninjas.objects.create(first_name='Randy', last_name='Blackwell', dojo=d5)
+>>> nn1.save()
+>>> nn2 = Ninjas.objects.create(first_name='Jack', last_name='Blackwell', dojo=d5)
+>>> nn2.save()
+>>> nn3 = Ninjas.objects.create(first_name='Bruce', last_name='Blackwell', dojo=d5)
+>>> nn3.save()
+
+create 3 ninjas that belong to the third dojo 
+
+>>> nnn1 = Ninjas.objects.create(first_name='Bryon', last_name='Blackwell', dojo=d6)
+>>> nnn1.save()
+>>> nnn2 = Ninjas.objects.create(first_name='Sterling', last_name='Blackwell', dojo=d6)
+>>> nnn2.save()
+>>> nnn3 = Ninjas.objects.create(first_name='Tiffany', last_name='Blackwell', dojo=d6)
+>>> nnn3.save()
+
+retrieve all the ninjas from the first dojo
+
+>>> Ninjas.objects.filter(dojo_id=4).values()
+
+
+retrieve all the ninjas from the last dojo
+
+>>> Ninjas.objects.filter(dojo_id=6).values()
+
+retrieve last ninja's dojo
+>>> nnn3.dojo.id
+6
+>>> 
+
+Add desc = models.CharField(max_length=255) in models.py
+
+Need to makemigrations and migrate. Will have to set a default code.
+>>> exit()
+(djangoPy3Env) Austins-MacBook-Air-2:dojo_ninjas_proj austinblackwell$ python manage.py makemigrations
+You are trying to add a non-nullable field 'desc' to dojo without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+
+>>> 'null' or "old dojo".
+
+from dojo_ninjas_app.models import*
+>>> d7 = Dojo.objects.create(name='badass', city='stanwood', state='wa', desc='The baddest assery ever!')
+>>> d7.save()
+
+

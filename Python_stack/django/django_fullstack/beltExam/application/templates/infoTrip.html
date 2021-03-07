@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Trip</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Hello {{thisUser.first_name}} Let's look over our trip!</h3>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Log Out</a>
+    </div>
+    <div class="container">
+        <h5>{{thisTrip.destination}}</h5>
+        <div class="box">
+            <p>Start Date: {{thisTrip.start_date}}</p>
+            <p>End Date: {{thisTrip.end_date}}</p>
+            <p>Created On: {{thisTrip.created_at}}</p>
+            <p>Last Updated On: {{thisTrip.updated_at}}</p>
+            <p>Plan: {{thisTrip.plan}}</p>
+            <p>Created by: {{thisUser.first_name}}</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+In the shell, if you want something to save or delete, you have to do it yourself. .save() or .delete()
+
+To input user data into the shell:
+>>> user1= User.objects.create(first_name="austin",last_name="blackwell",email="a@b.com",age=34)
+>>> user1.save()
+
+to print a list of all the users
+query1=User.objects.all()
+
+to print the first and last names
+>>> query2=User.objects.first()
+>>> query3=User.objects.last()
+
+to get the user ID
+>>> query4=User.objects.get(id=3)
+
+to change the last name of user id=#
+query4.last_name='pancakes'
+query4.save()
+
+This deleted SOMETHING but I'm not sure yet
+>>> query5=User.objects.get(id=2)
+>>> query5.delete()
+(1, {'users_app.User': 1})         (not sure what this means)
+>>> query5.delete()                 (something was deleted)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/austinblackwell/Documents/CodingDojo/Python_stack/my_environments/djangoPy3Env/lib/python3.9/site-packages/django/db/models/base.py", line 912, in delete
+    assert self.pk is not None, (
+AssertionError: User object can't be deleted because its id attribute is set to None.
+
+
+This is getting all users, sorted by first name
+query6=User.objects.all().order_by('first_name')
+
+to print out what you just input into the shell:
+>>> query6.values()

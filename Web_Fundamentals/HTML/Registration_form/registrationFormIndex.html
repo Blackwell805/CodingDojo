@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>My Registration Form</h2>
+
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value=" " /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value=" " /><br /><br />
+    </form>
+    <br />
+
+    <form action="/action_page.php">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br>
+      <label for="pw_confirm">Password Confirmation:</label>
+      <input type="password" id="pw_confirm" name="password_confirmation" />
+    </form>
+    <br />
+
+    <form>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" />
+    </form>
+
+    <form>
+      <h5>Please select your gender.</h5>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+    </form>
+    <form>
+      <h4>Please give a short descrition of yourself here:</h4>
+      <textarea name="message" rows="10" cols="30"> </textarea>
+    </form><br>
+
+    <select name="Favorite language">
+        <option value="male">JavaScript</optioncopy>
+        <option value="female">Python</option>
+        <option value="decline">Something ELSE!</option>
+    </select>
+
+<br>
+</br>
+
+    <input type="submit" value="Submit" />
+
+
+  </body>
+</html>

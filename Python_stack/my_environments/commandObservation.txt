@@ -1,0 +1,11 @@
+pip list -----> this lists out instructions or different commands you can do will in your virtual environment. 
+deactivate -----> this will exit the terminal out of the virtual environment. 
+pip3 list ----> this will list out the different pips that have been downloaded and available to use. 
+source myEnvironments/py3Env/bin/activate ----> this is how I enter my virtual environment
+pip install Django==2.2.4 ---->  this downloaded Django 2.2.4 (maybe two other pips)
+pip freeze -----> This is similar to pip list except it only showed the 3 (Django) things I just downloaded
+pip freeze > requirements.txt ---> when I went back to cd ~/Desktop and ran this in the terminal, it brought up a list of different things. Most of them were screen shots that I had. 
+pip uninstall Django ----> showed me the files that would be uninstalled and then asked if I wanted to proceed. 
+pip show Django ----> Tells me that packages : Django are not found. 
+
+

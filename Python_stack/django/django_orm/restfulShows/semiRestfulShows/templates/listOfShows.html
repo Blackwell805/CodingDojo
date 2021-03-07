@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> List of Shows </title>
+</head>
+
+<body>
+    <div>
+        <h1> All Shows </h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Network</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                {% for cool in shows %}
+                <td>{{cool.id}}</td>
+                <td>{{cool.title}}</td>
+                <td>{{cool.network}}</td>
+                <td>{{cool.releaseDate}}</td>
+                <td>
+                    <p><a href="/shows/{{cool.id}}">Show</a></p>
+                    <p><a href="/shows/{{cool.id}}/edit">Edit</a></p>
+                    <p><a href="/shows/{{cool.id}}/destroy">Delete</a></p>
+                </td>
+                {% endfor %}
+            </tr>
+        </table>
+        <p><a href="/shows/new">Add a New Show</a></p>
+    </div>
+</body>
+
+</html>
