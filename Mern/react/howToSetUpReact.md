@@ -12,6 +12,9 @@ npm start.
 -On your App.js, on the top; // import React from 'react
 -Create new folder in src folder. Call it 'components'. All components will be created this folder.
 ------COMPONENT names must have first letter CAPITALIZED
+-To use APIs, in terminal, type       npm install axios
+-To use @reach/router, in terminal, type          npm install @reach/router 
+
 
 
 When building a React app, split the things you want to do into COMPONENTS!
@@ -19,4 +22,8 @@ When building a React app, split the things you want to do into COMPONENTS!
 --IMPORTANT THINGS TO HAVE:
 ----e.preventDefault();
 ----sifting operator (...example)
-----For a form, be sure to have <form onSubmit=> to make sure it's being submitted. 
+----For a form, be sure to have <form onSubmit=> to make sure it's being submitted. Needs to have input="text" as well.
+----For things to change on the click, onChange={e => example(e.target.value)}
+--In the parent component, be sure to think of "What needs to be SHOWN and then what needs to be READ." Refer to Box Generator components. 
+--The props are the attributes of the component you create in the parent component. You can pass those attributes on to the children components using PROPS. The props must be contained in the parameters of the function you are using in a new component. 
+----Anytime using the onClick,

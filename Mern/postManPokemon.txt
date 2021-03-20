@@ -1,0 +1,44 @@
+1)
+"base_experience": 64,
+    "forms": [
+        {
+            "name": "bulbasaur",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/1/"
+        }
+    ],
+
+2)
+"base_experience": 142,
+    "forms": [
+        {
+            "name": "ivysaur",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/2/"
+        }
+    ],
+
+3)
+"base_experience": 236,
+    "forms": [
+        {
+            "name": "venusaur",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/3/"
+        }
+    ],
+
+4)
+"base_experience": 62,
+    "forms": [
+        {
+            "name": "charmander",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/4/"
+        }
+    ],
+
+5)
+"base_experience": 142,
+    "forms": [
+        {
+            "name": "charmeleon",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/5/"
+        }
+    ],

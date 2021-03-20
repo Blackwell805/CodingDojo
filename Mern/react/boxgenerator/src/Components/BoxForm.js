@@ -11,7 +11,7 @@ const BoxForm = (props) => {
         // setColor('Green')
         props.setAllColors([...props.allColors, color]) //...allColors is bringing out all the colors in the list, while the color is being added. 
         setColor('')
-        console.log("New Box Created!")
+        console.log("New Box Created!")1
     }
     
     return (
