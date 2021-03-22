@@ -1,15 +1,36 @@
 import React from 'react'
+import axios from 'axios';
+import {useState, useEffect} from 'react';
 
 const Planets = (props) => {
-    const {planet } = props;
+    const {id} = props;
+    const [responseData, setResponseData] = useState();
+    const [isLoaded, setIsLoaded] = useState();
+
+    useEffect(()=>{
+        axios.get(`https://swapi.dev/api/planets/${id}/`)
+            .then(response=>{
+                setResponseData(response.data)
+                setIsLoaded(true)
+            })
+            .catch((err) => console.log(err))
+    }, []); 
+
 
     return (
         <div>
-            <h2>{planet}</h2>
-            <p>Climate: {planet.climate}</p>
-            <p>Terrain: {planet.terrain}</p>
-            <p>Surface Water: {planet.surface_water}</p>
-            <p>Population: {planet.population}</p>
+            {
+                isLoaded?
+        <div>
+            <h3>{responseData.name}</h3>
+            <p>Climate: {responseData.climate}</p>
+            <p>Terrain: {responseData.terrain}</p>
+            <p>Surface Water: {responseData.surface_water}</p>
+            <p>Population: {responseData.population}</p>
+        </div>
+        :
+        <p>...loadingPlanet</p>
+        }
         </div>
     )
 }

@@ -1,30 +1,23 @@
 import { Router } from '@reach/router';
-import {useState} from 'react';
+import React  from 'react';
 import './App.css';
 import Search from './Components/Search';
 import People from './Components/People';
 import Planets from './Components/Planets';
 
 
-function App() {
-  const [category, setCategory] = useState('')
-  const [id, setID] = useState('')
-  // const [people, setPeople] = useState('')
-  // const [planet, setPlanet] = useState('')
+function App() { //I COULD store the State that I would use overall here in app.js BUT I'm not using state here. 
+
+
 
   return (
     
     <div className="App">
-      <header>
-        May the Force be with you!
-      <Search path=' '/>
-      </header>
-      
+      <Search />
       <Router>
-        <People path='/people/:id' people={people} setPeople={setPeople}/>
-        <Planets path='/planet/:id' planet={planet} setPlanet={setPlanet}/>
+        <People path='/people/:id' />
+        <Planets path='/planets/:id'/> 
       </Router>
-      
     </div>
   );
 }
