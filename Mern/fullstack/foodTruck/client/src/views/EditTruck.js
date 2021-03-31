@@ -1,27 +1,27 @@
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import { navigate} from '@reach/router';
-import React, {useEffect, useState} from 'react';
+import { navigate } from '@reach/router';
 import TruckForm from '../components/TruckForm';
 import DeleteButton from '../components/DeleteButton';
 
-const EditTruck = (props) => {
-    const {id} = props;
+const EditTruck = props => {
+    const { id } = props;
     const [loading, setLoading] = useState(true);
     const [truck, setTruck] = useState({
-        name: '',
-        type: '',
-        description: ''
+        name: "",
+        type: "",
+        description: ""
     });
     const [errors, setErrors] = useState({
         name: null,
-        type: null, 
+        type: null,
         description: null
     })
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/trucks/${id}`)
-        .then(response=>{
-            setTruck(response.data.results);
+            .then(response => {
+                setTruck(response.data.results);
                 setLoading(false);
             })
             .catch(err => navigate('/'));
@@ -33,6 +33,7 @@ const EditTruck = (props) => {
             [e.target.name]: e.target.value
         });
     }
+
 
     const submitHandler = e => {
         e.preventDefault();
@@ -51,17 +52,16 @@ const EditTruck = (props) => {
             <h4>Edit Food Truck</h4>
             {
                 loading ?
-                ' '
+                ''
                 :
                 <TruckForm
-                truck={truck}
-                inputHandler={changeHandler}
-                submitHandler={submitHandler}
-                errors={errors}
-                DeleteBtn={<DeleteButton id={id}/>}
-            />
+                    truck={ truck }
+                    inputHandler={ changeHandler }
+                    submitHandler={ submitHandler }
+                    errors={ errors }
+                    DeleteBtn={<DeleteButton id={id} />}
+                />
             }
-            
         </div>
     )
 }

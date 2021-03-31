@@ -405,3 +405,441 @@ console.log(twoSum([2,11,7,15], 9))
 function kMostFrequent(nums, k){
 
 }
+
+
+* 
+    Recreate Object.entries method
+    Given an object, return an array of arrays of the object's key value pairs, 
+    where each key value pair is a 2 item array
+    Do not include key value pairs from the given objects prototype (these are included 
+    by default when looping over an object's keys)
+*/
+
+// Object.entries() demonstration
+const myObj = {
+    fName: "Cody",
+    lName: "Thaller",
+    age: 30
+}
+
+console.log(Object.entries(myObj));
+// returns:
+// [ [ 'fName', 'Cody' ], [ 'lName', 'Thaller' ], [ 'age', 30 ] ]
+
+function entries(obj){
+
+}
+
+
+
+/* 
+    Given a table name string and an object whose key value pairs represent column names and values for the columns
+    return a SQL insert statement string
+    Tip: string interpolation (using back ticks, the key to the left of num 1 key) make it easy to add variables 
+    into a string or to add quotations without needing to escape them.
+    Bonus: after solving it, write a 2nd solution focusing on functional programming using built in methods
+
+    SQL INSERT STATEMENT
+    INSERT INTO table_name (column_1_name, column_2_name, column_3_name) VALUES (column_1_value, column_2_value, column_3_value);
+
+    NOTE: in the VALUES section, those values should be data-type appropriate. Datatypes that should be strings include:
+        - char
+        - varchar
+        - text
+        - binary
+        - dates
+        - timestamps
+
+    Technically, there is no such thing as boolean in SQL. It's TinyINT, which is 0 or 1
+
+    EXAMPLE: 
+    const table = "users";
+    const insertData = { first_name: "John", last_name: "Doe", age: 25 };
+
+    insert(table, insertData) should return:
+    "INSERT INTO users (first_name, last_name, age) VALUES ('John', 'Doe', 25);"
+
+    NOTE THE LACK OF QUOTES IN THE COLUMN NAMES AND THE APPROPRIATE COMMA PLACEMENT
+*/
+function insert(tableName, columnValuePairs) {
+
+}
+
+/* 
+    Given a search criteria object whose values will only be
+    primitives (ints, strings, booleans) and a list of objects.
+    return any object that matches all the key value pairs in the search
+    criteria object.
+    Bonus: write a 2nd solution using built-in methods to practice functional
+    programming.
+
+    EXAMPLE:
+    const search = {
+        power_1: "Money",
+        power_2: "Brooding"
+    }
+
+    const heroes = [
+        {
+            fName: "Clark",
+            lName: "Kent",
+            alias: "Superman",
+            power_1: "Super strength",
+            power_2: "Flight"
+        },
+        {
+            fName: "Bruce",
+            lName: "Wayne",
+            alias: "Batman",
+            power_1: "Money",
+            power_2: "Brooding"
+        },
+        {
+            fName: "Oliver",
+            lName: "Queen",
+            alias: "Green Arrow",
+            power_1: "Money",
+            power_2: "Bow and Arrow"
+        },
+        {
+            fName: "Ryan",
+            lName: "Choi",
+            alias: "Atom",
+            power_1: "Size alteration",
+            power_2: "Intelligence"
+        }
+    ]
+
+    find(search, heroes) should return:
+    [
+        {
+            fName: "Bruce",
+            lName: "Wayne",
+            alias: "Batman",
+            power_1: "Money",
+            power_2: "Brooding"
+        }
+    ]
+
+    even though there is only 1 match, it should still be in an array.
+
+*/
+function find(criteria, collection){
+
+}
+
+
+/* 
+    Given an id, an object that has keys with corresponding updated values, and an array of objects
+    Find the object by "id" key that matches the given id value and then update that object's
+    keys with the provided new values.
+    Return the updated object, or null if no object was found
+
+    EXAMPLE:
+    const students = [
+        {
+            id: 1,
+            name: "student1",
+            isLateToday: false,
+            lateCount: 15,
+            redBeltStatus: false,
+        },
+        {
+            id: 2,
+            name: "student2",
+            isLateToday: false,
+            lateCount: 1,
+            redBeltStatus: false,
+        },
+        {
+            id: 3,
+            name: "student3",
+            isLateToday: false,
+            lateCount: 0,
+            redBeltStatus: false,
+        },
+    ];
+    const id1 = 3;
+    const updateData1 = { redBeltStatus: true, isLateToday: true };
+
+    findByIdAndUpdate(id1, updateData1, students) should return:
+    {
+        id: 3,
+        name: "student3",
+        isLateToday: true,
+        lateCount: 0,
+        redBeltStatus: true,
+    }
+*/
+function findByIdAndUpdate(id, updateVals, collection) {
+
+}
+
+
+
+/* 
+    Given an array of objects, a searchFor string, and searchBy key that exists in the object
+    return a new array of only those objects whose value for the given key starts with the given search string
+    You can assume the key will exist on the object and the value of that key will be a string
+    Bonus: make the search case insensitive
+    Bonus: re-write it with functional programming in mind, using built in methods
+    Bonus: allow the search method to be provided as a parameter, e.g., string methods: includes, startsWith, endsWith
+        - you can assume the searchMethod will be valid
+    
+    EXAMPLE:
+    const coll = [
+        {
+            fName: "Bill",
+            lName: "Bob"
+        },
+        {
+            fName: "Mary",
+            lName: "Smith"
+        },
+        {
+            fName: "Joey",
+            lName: "Smony"
+        }
+    ]
+
+    let search = "Sm";
+    let searchBy = "lName"
+
+    filterByKey(coll, search, searchBy) should return
+    [
+        {
+            fName: "Mary",
+            lName: "Smith"
+        },
+        {
+            fName: "Joey",
+            lName: "Smony"
+        }
+    ]
+*/
+const coll = [
+    {
+        fName: "Bill",
+        lName: "Bob"
+    },
+    {
+        fName: "Mary",
+        lName: "Smith"
+    },
+    {
+        fName: "Joey",
+        lName: "Smony"
+    }
+]
+
+
+function filterByKey(collection, searchFor, searchBy){
+    return collection.filter(name => String(name[searchBy].toLowerCase()).startsWith(searchFor.toLowerCase()))
+}
+let search = "Sm";
+let searchBy = "lName"
+let method = 'startsWith';
+
+console.log(filterByKey(coll, search, searchBy, method))
+
+
+
+/* 
+    Optional chaining is a newer syntax that can help with this problem in general (not necessarily intended to be used here): 
+        https://levelup.gitconnected.com/new-javascript-features-in-2019-optional-chaining-null-coalescing-a7fd38f4ef2d
+    The more you deal with objects, especially ones with many nested objects, where you
+    are chaining dot notation to access nested values, the more you run into these errors:
+        Uncaught TypeError: Cannot read property 'keyName' of undefined
+        Uncaught TypeError: Cannot read property 'keyName' of null
+    
+    These errors mean, somewhere along your chain of dots, one of the keys did not exist
+    on the object so it returned undefined, and then the next dot was trying to access
+    a key on undefined, or the key did exist but null was it's value.
+    One example of how this might happen is getting JSON data back from an API. Sometimes, 
+    the record you requested has more data so there are more levels of nesting, which you get used to,
+    so you write your code to access the nested data but then you request a different record, and
+    less data is available, so your code breaks when trying to access nested data that isn't there.
+    There is an entire library dedicated to solving this problem, the solution is referred to as a "lens",
+    you look through a "lens" to help you see into an object and safely attempt to access a nested value.
+    Without a lens, you would need to interrupt your dot chaining and check the value after each dot,
+    one at a time, to make sure it is not undefined or null before going to the next dot.
+*/
+/* 
+    Input:
+        Object,
+        Array of strings representing a path of keys in the Object
+    Output:
+        - Value from traversing the object to the last key
+        - null if at any point accessing a key returns undefined
+        - this means a key was not found / the Object was not nested as deep as the path of keys goes
+        - the given object if array of keys is empty
+
+    EXAMPLE:
+    const user = {
+        id: 101,
+        email: "jack@dev.com",
+        personalInfo: {
+            name: "Jack",
+            address: {
+                line1: "westwish st",
+                line2: "washmasher",
+                city: "wallas",
+                state: "WX",
+            },
+        },
+        favorites: {
+            number: 0
+        }
+    };
+
+    const keys1 = ["personalInfo", "address", "city"];
+    const keys2 = ["personalInfo", "address", "country"];
+
+    lens(user, keys1) should return "wallas", because user.personalInfo.address.city is "wallas"
+
+    and lens(user, keys2) should return null, because there is no key called country inside of user.PersonalInfo.address
+};
+*/
+
+    function lens(obj, keys){
+        if(keys.length == 0){
+            return obj;
+        }
+        var currentKey = keys[0];
+        var currentObj = obj;
+        for(let i = 1; i < keys.length; i++){
+            if(currentObj[currentKey] == undefined){
+                return null;
+            } else {
+                currentObj = currentObj[currentKey];
+                currentKey = keys[i];
+            }
+        }
+        if(currentObj[currentKey] == undefined){
+            return null;
+        }
+        return currentObj[currentKey];
+    }
+
+/* 
+    Create a function to determine the max amount of
+    servings that can be made based on a recipe and
+    available ingredients.
+    Input:
+        - recipe object where keys are ingredient names
+        and values are unit required (int)
+        - available ingredients object where keys are ingredient
+        names and values are unit available (int)
+    Output:
+        int (max servings)
+    Side note (not needed for solution): Realistically, the values
+    would be an object as well with the keys: unit (unit of measure), and amount.
+    If the avaialable ingredient was stored in a different unit,
+    a conversion table would be needed to convert units of measure.
+
+    EXAMPLE:
+    const recipe1 = {
+        "organic fat": 99,
+        "live squid": 1,
+        "birds nest": 1,
+        "fried flesh": 1,
+        "spicy": 5,
+        "gourmet memes": 4200,
+    };
+    const available1 = {
+        "organic fat": 990,
+        "live squid": 1,
+        "birds nest": 10,
+        "fried flesh": 10,
+        "spicy": 50,
+        "gourmet memes": 42000,
+        "sugar": 9001,
+        "spice": 5,
+        "everything nice": 1,
+        "triple point water": 5,
+    };
+
+    getMaxServings(recipe1, available1) should return 1, because the limiting ingredient is live squid, and there is only 1 available.
+*/
+function getMaxServings(recipe, available){
+    
+}
+
+function getMaxServings(recipe, available){
+    let max = [];
+    for(key in recipe){
+        max.push(Math.floor(available[key]/recipe[key]));
+    }
+    let min = max[0]
+    for(let i = 0; i < max.length; i++){
+        if(max[i] < min){
+            min = max[i];
+        }
+    }
+    return min;
+}
+
+
+
+/*
+    Input: arr, callback
+    Output: arr (with elements removed)
+    Remove every element in the array, starting from idx 0,
+    until the callback function returns true when passed the
+    iterated element.
+    Return an empty array if the callback never returns true
+
+    EXAMPLE:
+    const nums = [1, 4, 3, 6, 9, 15];
+
+    const callback1 = (elem) => {
+        return elem > 5;
+    };
+
+    dropIt(nums, callback1) should return [6,9,15] because 6, 9, and 15 are the elements that,
+    when passed into callback1, will result in the function returning true.
+*/
+function dropIt(arr, callback){
+
+}
+
+/* 
+    Given to Neil in an interview
+    Given a string
+    return whether or not it's possible to make a palindrome out of the string's characters
+    What is it about a string that makes it possible for it to be a palindrome?
+
+    Palindrome - a word/phrase that is spelled the same way forwards and backwards
+
+    EXAMPLE:
+    const str1 = "dda";
+
+    const str2 = "aaadd";
+
+    const str3 = "acdd";
+
+    canStringBecomePalindrome(str1) should return true, because "dda" can be rearranged as "dad", 
+    which is the same forwards and backwards.
+
+    canStringBecomePalindrome(str2) should return true, because "aaadd" can be rearranged as "daaad"
+    or "adada", which are both the same forwards and backwards.
+
+    canStringBecomePalindrome(str3) should return false, because "acdd" cannot be rearranged in any
+    way that would make it the same forwards and backwards
+*/
+function canStringBecomePalindrome(string){
+    var len = string.length;
+    for(var i=0; i<len/2; i++){
+        if(string[i] !== string[len -1 -i]){
+            return "not a palindrome"
+        }
+    }
+    return "It's a palindrome"
+}
+
+const str1 = "dda";
+
+const str2 = "aaadd";
+
+const str3 = "acdd";
+console.log(canStringBecomePalindrome(str1))

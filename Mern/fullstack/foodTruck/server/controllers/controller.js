@@ -7,11 +7,12 @@ module.exports.createTruck = (req, res) => {
     .catch(err => res.json({ message: "error", errors: err.errors }));
 };
 
+
 module.exports.createReview = (req, res) => {
   FoodTruck.exists({ _id: req.params.id, "reviews.name": req.body.name })
     .then(exists => exists ? 
       Promise.reject({ name: { message: "You've already left a review on this truck" } })
-      : FoodTruck.findOneAndUpdate({ _id: req.params.id }, { $addToSet: { reviews: req.body } }, { new: true, runValidators: true }))
+      : FoodTruck.findOneAndUpdate({ _id: req.params.id }, { $addToSet: { reviews: req.body } }, { new: true, runValidators: true })) //$addToSet is a push function. 
     .then(data => res.json({ message: "success", results: data }))
     .catch(err => {
       if (err.errors) {
@@ -22,15 +23,17 @@ module.exports.createReview = (req, res) => {
     });
 };
 
-module.exports.getAllTrucks = (req, res) => {
+
+module.exports.getAllTrucks = (req, res) => { //req=what's coming in   res=what is being sent out
   FoodTruck.find()
     .then(data => res.json({ message: "success", results: data }))
     .catch(err => res.json({ message: "error", errors: err.errors }));
 };
 
+
 module.exports.getOneTruck = (req, res) => {
   FoodTruck.findById(req.params.id)
-    .then(data => res.json({ message: "success", results: data }))
+    .then(data => res.json({ message: "success", results: data })) //the data is the payload asked for by the url request. It is sent back via json and is stored as the value of the key "results". If you get confused,  console.log the response, go to the browser inspect, and see how the data is saved. Dot-walk it. 
     .catch(err => res.json({ message: "error", errors: err.errors }));
 };
 

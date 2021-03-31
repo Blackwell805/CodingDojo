@@ -3,29 +3,31 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import TruckForm from '../components/TruckForm'
 
-
 const NewTruck = () => {
     const [truck, setTruck] = useState({
-        name: '',
-        type: '',
-        description: ''
+        name: "",
+        style: "",
+        description: ""
     });
     const [errors, setErrors] = useState({
         name: null,
-        type: null,
+        style: null,
         description: null
     });
+
     const changeHandler = e => {
         setTruck({
             ...truck,
             [e.target.name]: e.target.value
         });
     }
+
     const submitHandler = e => {
         e.preventDefault();
-        axios.get('http://localhost:8000/api/trucks', truck)
+        axios.post('http://localhost:8000/api/trucks', truck)
             .then(response => {
-                if (response.data.message === 'error') {
+                console.log(response.data)
+                if(response.data.message === "error"){
                     setErrors(response.data.errors);
                 } else {
                     navigate('/');
@@ -37,10 +39,10 @@ const NewTruck = () => {
         <div>
             <h4>New Food Truck</h4>
             <TruckForm
-                truck={truck}
-                inputHandler={changeHandler}
-                submitHandler={submitHandler}
-                errors={errors}
+                truck={ truck }
+                inputHandler={ changeHandler }
+                submitHandler={ submitHandler }
+                errors={ errors }
             />
         </div>
     )

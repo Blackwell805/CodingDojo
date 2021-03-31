@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const JokesSchema = new mongoose.Schema({
-	"setup": String,
+	"setup": String, //this is the model of which data will need to be in when using Postman.
 	"punchline": String
 });
 
