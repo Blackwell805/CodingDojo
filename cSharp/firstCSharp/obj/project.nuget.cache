@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OWeyQqsYAYIvmUDFaILXTYvo4H/qyrHA8zLp98MgNAfPKpSVuG672BXZZjQy23Q1vzLQNPtHLa5UzkHIdu9Nnw==",
+  "success": true,
+  "projectFilePath": "/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/firstCSharp.csproj",
+  "expectedPackageFiles": [
+    "/Users/austinblackwell/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

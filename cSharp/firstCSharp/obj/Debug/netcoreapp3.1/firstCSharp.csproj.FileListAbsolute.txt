@@ -1,0 +1,12 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/bin/Debug/netcoreapp3.1/firstCSharp.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/bin/Debug/netcoreapp3.1/firstCSharp.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/bin/Debug/netcoreapp3.1/firstCSharp.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/bin/Debug/netcoreapp3.1/firstCSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/bin/Debug/netcoreapp3.1/firstCSharp.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/firstCSharp/obj/Debug/netcoreapp3.1/firstCSharp.genruntimeconfig.cache
