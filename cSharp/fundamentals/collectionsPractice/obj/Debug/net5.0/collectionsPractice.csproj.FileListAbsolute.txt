@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/collectionsPractice.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/collectionsPractice.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/collectionsPractice.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/collectionsPractice.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/ref/collectionsPractice.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/bin/Debug/net5.0/collectionsPractice.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/ref/collectionsPractice.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/collectionsPractice/obj/Debug/net5.0/collectionsPractice.genruntimeconfig.cache
