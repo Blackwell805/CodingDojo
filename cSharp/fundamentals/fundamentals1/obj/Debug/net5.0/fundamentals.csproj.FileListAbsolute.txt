@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/fundamentals.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/fundamentals.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/fundamentals.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/fundamentals.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/ref/fundamentals.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/bin/Debug/net5.0/fundamentals.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/ref/fundamentals.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/fundamentals1/obj/Debug/net5.0/fundamentals.genruntimeconfig.cache
