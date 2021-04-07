@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/basic13CSharp.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/basic13CSharp.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/basic13CSharp.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/basic13CSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/ref/basic13CSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/bin/Debug/net5.0/basic13CSharp.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/ref/basic13CSharp.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/basic13CSharp/obj/Debug/net5.0/basic13CSharp.genruntimeconfig.cache
