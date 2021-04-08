@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/human.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/human.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/human.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/human.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/ref/human.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/bin/Debug/net5.0/human.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/ref/human.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/human/obj/Debug/net5.0/human.genruntimeconfig.cache
