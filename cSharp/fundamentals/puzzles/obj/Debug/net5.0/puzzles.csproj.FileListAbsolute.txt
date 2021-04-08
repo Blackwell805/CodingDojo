@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/puzzles.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/puzzles.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/puzzles.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/puzzles.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/ref/puzzles.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/bin/Debug/net5.0/puzzles.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/ref/puzzles.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/fundamentals/puzzles/obj/Debug/net5.0/puzzles.genruntimeconfig.cache
