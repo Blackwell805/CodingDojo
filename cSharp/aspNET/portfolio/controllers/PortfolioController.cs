@@ -5,23 +5,23 @@ namespace Portfolio
     public class PortfolioController : Controller
     {
 
-        [Route("")]
+        [Route("")] // home route
         [HttpGet]
 
-        public ViewResult Index()
+        public string Index() //to make it run the Time Display assignment, type ViewResult where string is at
         {
-            return View("Index");
+            return ("This is my Index"); //put back View function to run time display
         }
 
-        [Route("projects")]
+        [Route("projects")] //localhost:5000 projects
         [HttpGet]
 
         public string projects()
         {
-            return ("This is my projects!");
+            return ("This is my projects!"); 
         }
 
-        [Route("contact")]
+        [Route("contact")] // localhost contacts
         [HttpGet]
 
         public string contact()
