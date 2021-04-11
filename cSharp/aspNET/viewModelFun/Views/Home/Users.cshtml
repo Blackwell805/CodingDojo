@@ -1,0 +1,11 @@
+@using viewModelFun.Models
+@using System.Collections.Generic
+
+<div>
+    <h2>Here are some names!</h2>
+    @model List<string>; //lowercase model refers to the controller
+    @foreach (string name in Model) //Uppercase Model refers to the Model page
+    {
+        <p>@name</p>
+    }
+</div>
