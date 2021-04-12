@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>Result</title>
+</head>
+
+<body>
+    <div class="container">
+        @model SurveyModel
+        <form asp-action="ResultPage" asp-controller="Home" method="POST">
+            <label asp-for="Name">Your Name:</label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Location">Dojo Location: </label>
+            <select asp-for="Location">
+                <option selected disabled>Select a location</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Boise">Boise</option>
+            </select>
+            <span asp-validation-for="Location"></span>
+            <label asp-for="Language">Favorite Language</label>
+            <select asp-for="Language">
+                <option selected disabled>Select a language</option>
+                <option value="Python">Python</option>
+                <option value="Mern">MERN</option>
+                <option value="CSharp">C#</option>
+            </select>
+            <span asp-validation-for="Language"></span>
+            <label asp-for="Comment">Comment (Optional):</label>
+            <textarea asp-for="Comment" cols="30" rows="10" placeholder="Enter comment here"></textarea>
+            <span asp-validation-for="Comment"></span>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
