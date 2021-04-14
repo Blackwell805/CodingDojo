@@ -1,0 +1,102 @@
+<div class="card">
+    <div class="card-header bg-dark text-light">Level 1</div>
+    <div class="card-body">
+        <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
+        <ol>
+            <li>...all womens' leagues</li>
+            <li>...all leagues where sport is any type of hockey</li>
+            <li>...all leagues where sport is something OTHER THAN football</li>
+            <li>...all leagues that call themselves "conferences"</li>
+            <li>...all leagues in the Atlantic region</li>
+            <li>...all teams based in Dallas</li>
+            <li>...all teams named the Raptors</li>
+            <li>...all teams whose location includes "City"</li>
+            <li>...all teams whose names begin with "T"</li>
+            <li>...all teams, ordered alphabetically by location</li>
+            <li>...all teams, ordered by team name in reverse alphabetical order</li>
+            <li>...every player with last name "Cooper"</li>
+            <li>...every player with first name "Joshua"</li>
+            <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
+            <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+        </ol>
+    </div>
+    <div>
+        <ol>
+            <li>1.------>@foreach (var Womens in ViewBag.AllWomenLeagues)
+                {
+                    @Womens.Name<br>
+                    ;
+                }</li>
+            <li>2------>@foreach (var Puck in ViewBag.AnyTypeOfHockey)
+                {
+                    @Puck.Sport<br>
+                    ;
+                }</li>
+            <li>3------>@foreach (var other in ViewBag.NotFootball)
+                {
+                    @other.Sport<br>
+                    ;
+                }</li>
+            <li>4------>@foreach (var BigTime in ViewBag.Conferences)
+                {
+                    @BigTime.Name<br>
+                    ;
+                }</li>
+            <li>5------>@foreach (var EastSide in ViewBag.AtlanticSide)
+                {
+                    @EastSide.Name<br>
+                    ;
+                }</li>
+            <li>6------>@foreach (var DirtySouth in ViewBag.Texas)
+                {
+                    @DirtySouth.Location @DirtySouth.TeamName<br>
+                    ;
+                }</li>
+            <li>7------>@foreach (var Sport in ViewBag.Dinosaur)
+                {
+                    @Sport.Location @Sport.TeamName<br>
+                    ;
+                }</li>
+            <li>8------>@foreach (var Place in ViewBag.City)
+                {
+                    @Place.Location @Place.TeamName<br>
+                    ;
+                }</li>
+            <li>9------>@foreach (var TeaBag in ViewBag.T)
+                {
+                    @TeaBag.Location @TeaBag.TeamName<br>
+                    ;
+                }</li>
+            <li>10------>@foreach (var NamesInOrder in ViewBag.InOrder)
+                {
+                    @NamesInOrder.Location @NamesInOrder.TeamName<br>
+                    ;
+                }</li>
+            <li>11------>@foreach (var NamesInNotInOrder in ViewBag.NotInOrder)
+                {
+                    @NamesInNotInOrder.Location @NamesInNotInOrder.TeamName<br>
+                    ;
+                }</li>
+            <li>12------>@foreach (var LName in ViewBag.Coop)
+                {
+                    @LName.FirstName @LName.LastName <br>
+                    ;
+                }</li>
+            <li>13------>@foreach (var FName in ViewBag.Joshing)
+                {
+                    @FName.FirstName @FName.LastName <br>
+                    ;
+                }</li>
+            <li>14------>@foreach (var Refined in ViewBag.CoopNotJosh)
+                {
+                    @Refined.FirstName @Refined.LastName <br>
+                    ;
+                }</li>
+            <li>15------>@foreach (var Choose in ViewBag.OneOrTwo)
+                {
+                    @Choose.FirstName @Choose.LastName <br>
+                    ;
+                }</li>
+        </ol>
+    </div>
+</div>
