@@ -1,0 +1,15 @@
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/hungryNinja.deps.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/hungryNinja.runtimeconfig.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/hungryNinja.runtimeconfig.dev.json
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/hungryNinja.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/ref/hungryNinja.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/bin/Debug/net5.0/hungryNinja.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.csprojAssemblyReference.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.GeneratedMSBuildEditorConfig.editorconfig
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.AssemblyInfoInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.AssemblyInfo.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.csproj.CoreCompileInputs.cache
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/ref/hungryNinja.dll
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.pdb
+/Users/austinblackwell/Documents/CodingDojo/cSharp/oop/hungryNinja/obj/Debug/net5.0/hungryNinja.genruntimeconfig.cache
