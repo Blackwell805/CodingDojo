@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+@using LoginAndRegistration.Models
+
+<div class="text-center">
+    <a href="/login">Login</a>
+    <h1 class="display-4">Register</h1>
+    <div>
+        @* this form will render through post method in controller *@
+        <form asp-action="register" asp-controller="Home" method="POST">
+            <label asp-formaction="FirstName">First Name:</label>
+            <span asp-validation-for="FirstName" class="text-danger font-weight-bold"></span>
+            <input asp-for="FirstName" type="text"><br><br>
+
+            <label asp-formaction="LastName">Last Name:</label>
+            <span asp-validation-for="LastName" class="text-danger font-weight-bold"></span>
+            <input asp-for="LastName" type="text"><br><br>
+
+            <label asp-formaction="Password">Password:</label>
+            <span asp-validation-for="Password" class="text-danger font-weight-bold"></span>
+            <input asp-for="Password" type="password"><br><br>
+
+            <label asp-formaction="ConfirmPassword">Confirm Password:</label>
+            <span asp-validation-for="ConfirmPassword" class="text-danger font-weight-bold"></span>
+            <input asp-for="ConfirmPassword" type="password"><br><br>
+
+            <label asp-formaction="Email">Email:</label>
+            <span asp-validation-for="Email" class="text-danger font-weight-bold"></span>
+            <input asp-for="Email" type="email"><br><br>
+
+            <input type="submit" value="Sign Up Now">
+        </form>
+    </div>
+</div>
