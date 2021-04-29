@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "New Activity";
+}
+
+@model Hobby
+
+<div>
+    <h1>Create a Hobby</h1>
+    <br>
+    <a asp-controller="Hobby" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Logout">Logout</a>
+</div>
+
+<div>
+    <form asp-controller="Hobby" asp-action="Create" method="POST">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" cols="30" rows="10"></textarea>
+            <span asp-validation-for="Description"></span>
+        </div>
+        <button type="submit">Create Activity</button>
+    </form>
+</div>

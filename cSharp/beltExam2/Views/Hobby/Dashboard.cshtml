@@ -1,0 +1,33 @@
+@model HobbyViewModel
+
+<div>
+    <h2>Hello, @Model.User.FirstName !</h2>
+    <br>
+    <h3>Hobbies</h3>
+    <a href="logout">Logout</a>
+</div>
+<br>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of Fans?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Hobby activity in Model.Hobbies)
+            {
+                <tr>
+                    <td><a asp-controller="Hobby" asp-action="Hobby" asp-route-id=@activity.HobbyId>@activity.Name</a></td>
+
+                    <td>@activity.Fans.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br>
+<div>
+    <a asp-controller="Hobby" asp-action="New">Create a Hobby</a>
+</div>

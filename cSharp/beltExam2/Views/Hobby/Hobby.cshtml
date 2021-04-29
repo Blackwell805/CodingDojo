@@ -1,0 +1,37 @@
+@model Hobby
+
+
+<div>
+    <h1>@Model.Name</h1>
+    <br>
+    <p>Description: @Model.Description</p>
+    <br>
+    <a asp-controller="Hobby" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Logout">Logout</a>
+</div>
+<br>
+<div>
+    <h4>@Model.Name Fans:</h4>
+    <ul>
+        @foreach (var participant in Model.Fans)
+        {
+            <li>@participant.User.FirstName</li>
+        }
+    </ul>
+</div>
+<br>
+<div>
+    @if (Model.UserId != @Context.Session.GetInt32("userId"))
+    {
+        <h4>Become a Fan!</h4>
+        <form asp-controller="Hobby" asp-action="Join" asp-route-id=@Model.HobbyId method="POST">
+            <button type="submit">Join</button>
+        </form>
+    }
+    @if (Model.UserId != @Context.Session.GetInt32("userId"))
+    {
+        <form asp-controller="Hobby" asp-action="Leave" asp-route-id=@Model.HobbyId method="POST">
+            <button type="submit">Leave</button>
+        </form>
+    }
+</div>
