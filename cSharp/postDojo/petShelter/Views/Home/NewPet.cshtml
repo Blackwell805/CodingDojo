@@ -1,0 +1,44 @@
+@model Pet
+
+<div>
+    <header>
+        <h1>Pet Shelter</h1>
+        <h4>Know a pet needing a home?</h4>
+        <a asp-controller="Home" asp-action="Index">Back to home</a>
+    </header>
+</div>
+<div>
+    <form asp-controller="Home" asp-action="Create" method="POST">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-formaction="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Type"></label>
+            <input asp-for="Type">
+            <span asp-validation-for="Type"></span>
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <input asp-for="Description">
+            <span asp-validation-for="Description"></span>
+        </div>
+        <div>
+            <label asp-for="Skill1"></label>
+            <input asp-for="Skill1">
+            <span asp-validation-for="Skill1"></span>
+        </div>
+        <div>
+            <label asp-for="Skill2"></label>
+            <input asp-for="Skill2">
+            <span asp-validation-for="Skill2"></span>
+        </div>
+        <div>
+            <label asp-for="Skill3"></label>
+            <input asp-for="Skill3">
+            <span asp-validation-for="Skill3"></span>
+        </div>
+        <button type="submit">Submit Pet!</button>
+    </form>
+</div>

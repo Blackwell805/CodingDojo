@@ -1,0 +1,33 @@
+@model List<Pet>
+<div class="text-center">
+    <div>
+        <header>
+            <h1>Pet Shelter</h1>
+            <h4>These pets are looking for a good home!</h4>
+            <a href="Pet">Add a new pet to the shelter</a>
+        </header>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Pet animal in Model)
+                {
+                    <tr>
+                        <td><a asp-controller="Home" asp-action="Pet"></a></td>
+                        <td>@animal.Name</td>
+                        <td>@animal.Type</td>
+                        <td>@animal.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
