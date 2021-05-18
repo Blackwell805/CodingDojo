@@ -17,7 +17,7 @@ namespace petShelter.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-
+        public Pet Pet { get; set; }
         List<Pet> MyPets { get; set; }
 
         public string FullName()

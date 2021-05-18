@@ -26,7 +26,7 @@ namespace petShelter.Models
         public DateTime UpdatedAt { get; set; }
 
         public Owner Owner { get; set; }
-        public int OwnerId { get; set; }
+        public int? OwnerId { get; set; }
 
     }
 }

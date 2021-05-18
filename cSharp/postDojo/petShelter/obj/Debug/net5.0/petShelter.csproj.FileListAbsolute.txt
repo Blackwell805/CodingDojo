@@ -50,3 +50,4 @@
 /Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/obj/Debug/net5.0/Razor/Views/Home/NewPet.cshtml.g.cs
 /Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/obj/Debug/net5.0/Razor/Views/Home/_PetListView.cshtml.g.cs
 /Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/obj/Debug/net5.0/Razor/Views/Home/_OwnerListView.cshtml.g.cs
+/Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/obj/Debug/net5.0/Razor/Views/Home/Pet.cshtml.g.cs

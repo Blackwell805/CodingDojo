@@ -1,4 +1,3 @@
-@model List<Pet>
 <div class="text-center">
     <div>
         <header>
@@ -14,15 +13,15 @@
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
-                    <th>Actions</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (Pet animal in Model)
                 {
                     <tr>
-                        <td><a asp-controller="Home" asp-action="Pet"></a></td>
-                        <td>@animal.Name</td>
+                        <td><a asp-controller="Home" asp-action="Index"></a></td>
+                        <td><a href="/pet/{PetId}">@animal.Name</a></td>
                         <td>@animal.Type</td>
                         <td>@animal.Description</td>
                     </tr>

@@ -1,25 +1,22 @@
-@model Owner
-
 <div class="text-center">
     <div>
         <h3>Current Owners of Pets</h3>
-        <a href="Own">Become a owner!</a>
+        <a href="/pet/own">Become a owner!</a>
         <table>
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @* @foreach (Owner person in Model.Owner)
-                    {
+                @foreach (Owner person in Model)
+                {
                     <tr>
-                    <td><a asp-controller="Home" asp-action="Pet"></a></td>
-                    <td>@animal.Type</td>
-                    <td>@animal.Description</td>
+                        <td><a asp-controller="Home" asp-action="Index"></a></td>
+                        <td>@person.FirstName @person.LastName
+                        <td></td>
                     </tr>
-                    } *@
+                }
             </tbody>
         </table>
     </div>

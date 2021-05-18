@@ -59,7 +59,7 @@ namespace petShelter.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("OwnerId")
+                    b.Property<int?>("OwnerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Skill1")
@@ -80,7 +80,8 @@ namespace petShelter.Migrations
 
                     b.HasKey("PetId");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerId")
+                        .IsUnique();
 
                     b.ToTable("Pets");
                 });
@@ -88,12 +89,15 @@ namespace petShelter.Migrations
             modelBuilder.Entity("petShelter.Models.Pet", b =>
                 {
                     b.HasOne("petShelter.Models.Owner", "Owner")
-                        .WithMany()
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithOne("Pet")
+                        .HasForeignKey("petShelter.Models.Pet", "OwnerId");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("petShelter.Models.Owner", b =>
+                {
+                    b.Navigation("Pet");
                 });
 #pragma warning restore 612, 618
         }

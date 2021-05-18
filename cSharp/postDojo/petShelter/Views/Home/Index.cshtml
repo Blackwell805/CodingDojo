@@ -1,11 +1,10 @@
-﻿@{
-    List<Pet> newPet = new List<Pet>();
-    Owner newOwner = new Owner();
-}
+﻿@model PetViewModel
 
 <div>
-    <div>
-        <partial name="_PetListView" model="newPet" />
-        <partial name="_OwnerListView" model="newOwner" />
+    <div id="pets">
+        <partial name="_PetListView" model=@Model.Pets />
+    </div>
+    <div id="owners">
+        <partial name="_OwnerListView" model=@Model.Owners />
     </div>
 </div>

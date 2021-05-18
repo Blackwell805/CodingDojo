@@ -1,0 +1,16 @@
+@model PetViewModel
+
+<div>
+    <h1>Pet Shelter</h1>
+    @foreach (Pet animal in Model.Pets)
+    {
+        <h3>Details about: @animal.Name</h3>
+        <div>
+            <p>Pet Type: @animal.Type</p>
+            <p>Description: @animal.Description</p>
+            <p>Skill One:@animal.Skill1</p>
+            <p>Skill Two:@animal.Skill2</p>
+            <p>Skill Three:@animal.Skill3</p>
+        </div>
+    }
+</div>

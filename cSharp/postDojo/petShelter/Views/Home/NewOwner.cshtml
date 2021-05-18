@@ -3,22 +3,22 @@
 <div>
     <header>
         <h1>Pet Owner</h1>
-        <h4>Want to own one of our pets?? Sign up!</h4>
+        <h4>Want to adopt? Sign up!</h4>
         <a asp-controller="Home" asp-action="Index">Back to home</a>
     </header>
 </div>
 <div>
-    <form asp-controller="Home" asp-action="NewOwner" method="POST">
+    <form asp-controller="Home" asp-action="Owner" method="POST">
         <div>
             <label asp-for="FirstName"></label>
             <input asp-for="FirstName">
-            <span asp-validation-formaction="FirstName"></span>
+            <span asp-validation-for="FirstName"></span>
         </div>
         <div>
             <label asp-for="LastName"></label>
             <input asp-for="LastName">
             <span asp-validation-for="LastName"></span>
         </div>
-        <button type="submit"></button>
+        <button type="submit">Submit</button>
     </form>
 </div>

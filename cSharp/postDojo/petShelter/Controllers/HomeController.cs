@@ -22,9 +22,17 @@ namespace petShelter.Controllers
         [HttpGet("/")] //review what is happening here and how it relates to the POST
         public IActionResult Index()
         {
-            List<Pet> allPets = new List<Pet>();
+            var model = new PetViewModel
+            {
+                Pets = _context.Pets
+                .Include(p => p.Owner)
+                .ToList(),
+                Owners = _context.Owners
+                .Include(o => o.Pet)
+                .ToList()
+            };
 
-            return View("Index", allPets); //we pass the newly created variable to pass it into the view page. 
+            return View("Index", model); //we pass the newly created variable to pass it into the view page. 
         }
 
         [HttpGet("pet")]
@@ -32,10 +40,7 @@ namespace petShelter.Controllers
         {
             return View("NewPet");
         }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+
 
         [HttpPost("/pet/new")]
         public IActionResult Create(Pet newPet)
@@ -57,7 +62,49 @@ namespace petShelter.Controllers
 
         }
 
+        [HttpGet("pet/{PetId}")]
+        public IActionResult Detail(int PetId)
+        {
+            var singlePet = new PetViewModel
+            {
+                Animal = _context.Pets
+            .Include(d => d.PetId == PetId)
+            .FirstOrDefault()
 
+            };
+            return View("Pet");
+        }
+
+        [HttpGet("/pet/own")]
+
+        public IActionResult Own()
+        {
+            return View("NewOwner");
+        }
+
+        [HttpPost("/pet/owner")]
+        public IActionResult Owner(Owner newOwner)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(newOwner);
+                _context.SaveChanges();
+                return RedirectToAction("Index", new { IDbContextFactory = newOwner.OwnerId });
+            }
+            else
+            {
+                if (newOwner.FullName() == null)
+                {
+                    ModelState.TryAddModelError("Name", "Need a name entered");
+                }
+                return View("Index", newOwner);
+            }
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

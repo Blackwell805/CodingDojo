@@ -9,8 +9,8 @@ using petShelter.Models;
 namespace petShelter.Migrations
 {
     [DbContext(typeof(PetShelterContext))]
-    [Migration("20210510160643_1stMigrations")]
-    partial class _1stMigrations
+    [Migration("20210514184846_1stmigrations")]
+    partial class _1stmigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,6 +18,31 @@ namespace petShelter.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
+
+            modelBuilder.Entity("petShelter.Models.Owner", b =>
+                {
+                    b.Property<int>("OwnerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("OwnerId");
+
+                    b.ToTable("Owners");
+                });
 
             modelBuilder.Entity("petShelter.Models.Pet", b =>
                 {
@@ -35,6 +60,9 @@ namespace petShelter.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<int?>("OwnerId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Skill1")
                         .HasColumnType("longtext");
@@ -54,7 +82,24 @@ namespace petShelter.Migrations
 
                     b.HasKey("PetId");
 
+                    b.HasIndex("OwnerId")
+                        .IsUnique();
+
                     b.ToTable("Pets");
+                });
+
+            modelBuilder.Entity("petShelter.Models.Pet", b =>
+                {
+                    b.HasOne("petShelter.Models.Owner", "Owner")
+                        .WithOne("Pet")
+                        .HasForeignKey("petShelter.Models.Pet", "OwnerId");
+
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("petShelter.Models.Owner", b =>
+                {
+                    b.Navigation("Pet");
                 });
 #pragma warning restore 612, 618
         }

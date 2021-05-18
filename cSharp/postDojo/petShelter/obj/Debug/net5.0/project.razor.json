@@ -15639,6 +15639,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/Views/Home/Pet.cshtml",
+      "TargetPath": "Views\\Home\\Pet.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/austinblackwell/Documents/CodingDojo/cSharp/postDojo/petShelter/Views/Home/NewPet.cshtml",
       "TargetPath": "Views\\Home\\NewPet.cshtml",
       "FileKind": "mvc"
