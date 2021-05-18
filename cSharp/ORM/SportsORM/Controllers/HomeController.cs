@@ -52,6 +52,9 @@ namespace SportsORM.Controllers
         [HttpGet("level_2")]
         public IActionResult Level2()
         {
+            ViewBag.allTeams = _context.Leagues
+            .Select(e=>e.Name.
+
             return View();
         }
 
